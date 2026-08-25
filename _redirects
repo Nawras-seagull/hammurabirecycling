@@ -1,0 +1,26 @@
+# Netlify redirects for Hammurabi Golden Gate
+# Folder + index.html already gives clean /about-us/ style URLs natively,
+# so nothing below is required for the core routes. These rules only
+# guard against stray legacy WordPress URL patterns and non-trailing-slash
+# typos so nothing 404s unexpectedly after the switch from WP.
+
+/about-us          /about-us/          301
+/our_products       /our_products/       301
+/contact-us         /contact-us/         301
+/home                /                    301
+
+# Arabic tree — same trailing-slash cleanup
+/ar/about-us         /ar/about-us/        301
+/ar/our_products      /ar/our_products/     301
+/ar/contact-us        /ar/contact-us/       301
+
+# Common WP admin/API paths from the old site — send straight home instead
+# of leaking a 404 for bots/old bookmarks still probing them.
+/wp-admin/*          /                    301
+/wp-login.php         /                    301
+/wp-content/*         /                    404
+/wp-json/*            /                    404
+
+# Fallback 404 pages — Arabic visitors under /ar/ get the Arabic 404
+/ar/*                 /ar/404.html         404
+/*                    /404.html            404

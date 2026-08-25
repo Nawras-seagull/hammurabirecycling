@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--
+    Theme init — runs synchronously, before first paint, so there is no
+    flash of the wrong theme. Reads a saved preference if one exists;
+    otherwise follows the OS/browser's prefers-color-scheme. The toggle
+    button in the header (wired up in main.js) flips this later.
+  -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("hgg-theme");
+        var theme = saved || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    })();
+  </script>
+  <title>Our Products — Hammurabi Golden Gate</title>
+  <meta name="description" content="Rubber granules, rubber mulch, Tire Derived Fuel (TDF), and reclaimed steel wire — premium recycled materials made in Iraq by Hammurabi Golden Gate.">
+  <link rel="canonical" href="https://hammurabirecycling.com/our_products/">
+  <link rel="alternate" hreflang="en" href="https://hammurabirecycling.com/our_products/">
+  <link rel="alternate" hreflang="ar" href="https://hammurabirecycling.com/ar/our_products/">
+  <link rel="alternate" hreflang="x-default" href="https://hammurabirecycling.com/our_products/">
+
+  <!-- Favicons -->
+  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/images/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="alternate icon" href="/assets/images/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#14120F" id="theme-color-meta">
+
+  <!-- Open Graph / social previews (Facebook, WhatsApp, TikTok) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Hammurabi Golden Gate">
+  <meta property="og:title" content="Our Products — Hammurabi Golden Gate">
+  <meta property="og:description" content="Rubber granules, rubber mulch, Tire Derived Fuel (TDF), and reclaimed steel wire — premium recycled materials made in Iraq by Hammurabi Golden Gate.">
+  <meta property="og:url" content="https://hammurabirecycling.com/our_products/">
+  <meta property="og:image" content="https://hammurabirecycling.com/assets/images/og-cover.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Our Products — Hammurabi Golden Gate">
+  <meta name="twitter:description" content="Rubber granules, rubber mulch, Tire Derived Fuel (TDF), and reclaimed steel wire — premium recycled materials made in Iraq by Hammurabi Golden Gate.">
+  <meta name="twitter:image" content="https://hammurabirecycling.com/assets/images/og-cover.webp">
+
+  <!-- Fonts: Fraunces/Inter/IBM Plex Mono for English, Noto Kufi Arabic /
+       IBM Plex Sans Arabic for Arabic — only the set this page needs is
+       loaded, kept lightweight. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,680&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Structured data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://hammurabirecycling.com/#organization",
+    "name": "Hammurabi Golden Gate",
+    "alternateName": "Hammurabi Gate Tire Recycling",
+    "url": "https://hammurabirecycling.com/",
+    "logo": "https://hammurabirecycling.com/assets/images/logo-mark.svg",
+    "image": "https://hammurabirecycling.com/assets/images/og-cover.webp",
+    "description": "Iraq's tire recycling factory, transforming end-of-life tires into rubber granules, rubber mulch, Tire Derived Fuel (TDF), and reclaimed steel through advanced shredding and granulation technology.",
+    "telephone": "+964-780-311-3333",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Al-Jihad District",
+      "addressLocality": "Baghdad",
+      "addressCountry": "IQ"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"],
+      "opens": "07:30",
+      "closes": "15:30"
+    },
+    "sameAs": [
+      "https://www.facebook.com/share/1CkGvnYvAS/?mibextid=wwXIfr",
+      "https://youtube.com/@hummrabicompany",
+      "https://www.tiktok.com/@hammurabigatefactory"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hammurabirecycling.com/"},{"@type":"ListItem","position":2,"name":"Our Products","item":"https://hammurabirecycling.com/our_products/"}]}
+  </script>
+
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">
+        <img src="/assets/images/logo-mark.svg" alt="" width="38" height="38">
+        <span class="brand-word">Hammurabi Golden Gate<small>Tire Recycling &middot; Iraq</small></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="/" >Home</a>
+        <a href="/about-us/" >About</a>
+        <a href="/our_products/" aria-current="page">Our Products</a>
+        <a href="/contact-us/" >Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switch" aria-label="Language">
+          <a href="/our_products/" aria-current="true">EN</a>
+          <a href="/ar/our_products/">عربي</a>
+        </div>
+        <button class="theme-toggle" aria-label="Switch to light theme">
+          <svg data-icon="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.5 12H2M22 12h-2.5M5.8 5.8l1.7 1.7M16.5 16.5l1.7 1.7M18.2 5.8l-1.7 1.7M7.5 16.5l-1.7 1.7"/></svg>
+          <svg data-icon="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+        </button>
+        <div class="social-row" aria-label="Social media">
+          <a href="https://www.facebook.com/share/1CkGvnYvAS/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.5 1.6-1.5h1.7V3.3C16.5 3.2 15.4 3 14.2 3c-2.6 0-4.4 1.6-4.4 4.5v2.3H7v3.2h2.8v8h3.7Z"/></svg>
+          </a>
+          <a href="https://youtube.com/@hummrabicompany?si=nhWpqMXGx0K7RO59" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12s0-3.2-.4-4.7a2.8 2.8 0 0 0-2-2C17.9 5 12 5 12 5s-5.9 0-7.6.3a2.8 2.8 0 0 0-2 2C2 8.8 2 12 2 12s0 3.2.4 4.7a2.8 2.8 0 0 0 2 2C6.1 19 12 19 12 19s5.9 0 7.6-.3a2.8 2.8 0 0 0 2-2C22 15.2 22 12 22 12ZM10 15.3V8.7l6 3.3-6 3.3Z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@hammurabigatefactory?_r=1&amp;_t=ZS-91ijGrAhvzr" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 3h-3.2v12.6a2.7 2.7 0 1 1-2.3-2.7v-3.3a6 6 0 1 0 5.5 6V9.4a7.7 7.7 0 0 0 4.4 1.4V7.6a4.4 4.4 0 0 1-4.4-4.4V3Z"/></svg>
+          </a>
+        </div>
+        <a class="btn btn--gold header-cta" href="/contact-us/">Request a Quote</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-drawer" data-open="false">
+    <div class="mobile-drawer__backdrop"></div>
+    <div class="mobile-drawer__panel" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+      <div class="mobile-drawer__top">
+        <a class="brand" href="/">
+          <img src="/assets/images/logo-mark.svg" alt="" width="32" height="32">
+          <span class="brand-word" style="font-size:1rem;">Hammurabi Golden Gate</span>
+        </a>
+        <button class="mobile-drawer__close" aria-label="Close menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <nav aria-label="Mobile primary">
+        <a href="/" >Home</a>
+        <a href="/about-us/" >About</a>
+        <a href="/our_products/" aria-current="page">Our Products</a>
+        <a href="/contact-us/" >Contact</a>
+      </nav>
+      <div class="mobile-drawer__meta">
+        <div class="mobile-drawer__lang">
+          <span>Language</span>
+          <div class="lang-switch">
+            <a href="/our_products/" aria-current="true">EN</a>
+            <a href="/ar/our_products/">عربي</a>
+          </div>
+        </div>
+        <div class="mobile-drawer__theme">
+          <span>Theme</span>
+          <button class="theme-toggle" aria-label="Switch to light theme">
+            <svg data-icon="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.5 12H2M22 12h-2.5M5.8 5.8l1.7 1.7M16.5 16.5l1.7 1.7M18.2 5.8l-1.7 1.7M7.5 16.5l-1.7 1.7"/></svg>
+            <svg data-icon="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+          </button>
+        </div>
+        <a href="tel:+9647803113333">+(964) 780 311 3333</a>
+        <a href="/contact-us/" class="btn btn--gold btn--block">Request a Quote</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ================= PAGE HERO ================= -->
+    <section class="breadcrumb-hero">
+      <div class="container" data-reveal>
+        <span class="eyebrow">Our Products</span>
+        <h1 style="margin-top:0.4em;">Premium Raw Materials, Made in Iraq</h1>
+        <p class="lede" style="margin-top:1rem; max-width:52ch;">At <strong>Hammurabi Golden Gate</strong>, we believe quality is the result of intelligent effort. Our advanced recycling lines process end-of-life tires into clean, uniform, and high-value materials.</p>
+        <p style="margin-top:1rem; max-width:60ch;">By choosing our products, you are supporting Iraqi industry and ensuring a sustainable supply chain for your business.</p>
+      </div>
+    </section>
+
+    <hr class="threshold">
+
+    <!-- ================= PRODUCT DETAIL LIST ================= -->
+    <section class="section">
+      <div class="container">
+
+        <article class="product-detail" id="crumb" data-reveal>
+          <div class="product-detail-head">
+            <h2>Rubber Granules <span style="color:var(--steel); font-weight:400;">(Crumb Rubber)</span></h2>
+          </div>
+          <p class="tagline">High-purity rubber for construction, sports, and manufacturing.</p>
+          <p>Our flagship product. We produce steel-free and fiber-free rubber granules in various mesh sizes to meet specific industrial requirements. Uniform in size and free of contaminants, our granules are the perfect alternative to virgin rubber.</p>
+          <div class="apps-grid">
+            <div class="app-item"><strong>Sports Surfaces</strong><span>Essential infill for artificial turf football fields and running tracks.</span></div>
+            <div class="app-item"><strong>Playground Safety</strong><span>Used in manufacturing impact-absorbing rubber tiles to keep children safe.</span></div>
+            <div class="app-item" id="asphalt"><strong>Asphalt Modification</strong><span>Mixed with bitumen to create "Rubberized Asphalt," which creates roads that are quieter, more durable, and resistant to cracking under the hot Iraqi sun.</span></div>
+            <div class="app-item"><strong>Molded Products</strong><span>Used to create mats, bumpers, and industrial flooring.</span></div>
+          </div>
+        </article>
+
+        <article class="product-detail" id="mulch" data-reveal>
+          <div class="product-detail-head">
+            <h2>Rubber Mulch</h2>
+          </div>
+          <p class="tagline">The superior choice for landscaping and playgrounds.</p>
+          <p>Our rubber mulch mimics the look of natural wood bark but offers superior durability and safety. It does not rot, absorb water, or attract insects (like termites).</p>
+          <div class="apps-grid">
+            <div class="app-item"><strong>Landscaping</strong><span>Garden beds and decorative areas (requires zero maintenance).</span></div>
+            <div class="app-item"><strong>Playgrounds</strong><span>Loose-fill surface that provides excellent shock absorption for falls.</span></div>
+            <div class="app-item"><strong>Equestrian Arenas</strong><span>Provides a soft, dust-free footing for horses.</span></div>
+          </div>
+        </article>
+
+        <article class="product-detail" id="tdf" data-reveal>
+          <div class="product-detail-head">
+            <h2>Tire Derived Fuel <span style="color:var(--steel); font-weight:400;">(TDF)</span></h2>
+          </div>
+          <p class="tagline">A high-energy, cost-effective alternative fuel source.</p>
+          <p>Tire Derived Fuel (TDF) is composed of shredded tires chipped into specific sizes (usually 2 to 4 inches). It is a superior energy source for energy-intensive industries. TDF produces higher heat output than coal and wood, making it an excellent choice for reducing fuel costs.</p>
+          <h3 style="margin-top:1.75rem; color:var(--parchment);">Ideal For</h3>
+          <div class="apps-grid">
+            <div class="app-item"><strong>Cement Kilns</strong><span>TDF is widely used in the cement industry as a coal substitute.</span></div>
+            <div class="app-item"><strong>Power Plants</strong><span>For waste-to-energy power generation.</span></div>
+            <div class="app-item"><strong>Paper &amp; Pulp Mills</strong><span>For industrial boilers.</span></div>
+          </div>
+          <h3 style="margin-top:1.75rem; color:var(--parchment);">Key Benefits</h3>
+          <ul class="value-list" style="margin-top:1rem;">
+            <li>Higher calorific value than coal.</li>
+            <li>Lower moisture content.</li>
+            <li>Reliable, consistent supply.</li>
+          </ul>
+        </article>
+
+        <article class="product-detail" data-reveal>
+          <div class="product-detail-head">
+            <h2>Reclaimed Steel Wire</h2>
+          </div>
+          <p class="tagline">High-quality scrap metal for the steel industry.</p>
+          <p>Tires contain high-tensile steel wire for reinforcement. During our recycling process, we magnetically separate this steel, cleaning it of rubber residue. This results in high-grade scrap steel ready for smelting and repurposing.</p>
+          <h3 style="margin-top:1.75rem; color:var(--parchment);">Applications</h3>
+          <div class="apps-grid">
+            <div class="app-item"><strong>Steel Mills &amp; Foundries</strong><span>Reclaimed wire feeds directly back into steel production.</span></div>
+            <div class="app-item"><strong>Metal Recycling</strong><span>Used in smelting and repurposing operations.</span></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <div class="gate-divider" aria-hidden="true">
+      <svg viewBox="0 0 64 64" fill="none"><path d="M18 46V27M46 46V27M15 27H49M12.5 20.5H51.5M22 46H42" stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round"/></svg>
+    </div>
+
+    <!-- ================= WHY SOURCE FROM US ================= -->
+    <section class="section section--raised">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">The Hammurabi Advantage</span>
+          <h2>Why Source From Us?</h2>
+        </div>
+        <div class="benefit-strip" data-reveal-group>
+          <div class="benefit" data-reveal><strong>Consistent Quality</strong><p>Our automated technology ensures every bag of granules and every ton of TDF meets precise specifications.</p></div>
+          <div class="benefit" data-reveal><strong>Local Supply</strong><p>Eliminate the cost and delay of importing materials. We are right here in Iraq.</p></div>
+          <div class="benefit" data-reveal><strong>Competitive Pricing</strong><p>We offer high-value materials at competitive market rates.</p></div>
+          <div class="benefit" data-reveal><strong>Sustainability</strong><p>Using our products contributes to LEED certification and Green Building standards.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta-band" data-reveal>
+          <h2>Ready to source Iraqi-made recycled materials?</h2>
+          <a class="btn btn--gold" href="/contact-us/">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/">
+            <img src="/assets/images/logo-mark.svg" alt="" width="34" height="34">
+            <span class="brand-word">Hammurabi Golden Gate</span>
+          </a>
+          <p>Iraq's tire recycling factory — turning end-of-life tires into asphalt modifiers, crumb rubber, and Tire Derived Fuel.</p>
+          <div class="social-row" style="margin-top:1.5rem;" aria-label="Social media">
+            <a href="https://www.facebook.com/share/1CkGvnYvAS/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.5 1.6-1.5h1.7V3.3C16.5 3.2 15.4 3 14.2 3c-2.6 0-4.4 1.6-4.4 4.5v2.3H7v3.2h2.8v8h3.7Z"/></svg>
+            </a>
+            <a href="https://youtube.com/@hummrabicompany?si=nhWpqMXGx0K7RO59" target="_blank" rel="noopener" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12s0-3.2-.4-4.7a2.8 2.8 0 0 0-2-2C17.9 5 12 5 12 5s-5.9 0-7.6.3a2.8 2.8 0 0 0-2 2C2 8.8 2 12 2 12s0 3.2.4 4.7a2.8 2.8 0 0 0 2 2C6.1 19 12 19 12 19s5.9 0 7.6-.3a2.8 2.8 0 0 0 2-2C22 15.2 22 12 22 12ZM10 15.3V8.7l6 3.3-6 3.3Z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@hammurabigatefactory?_r=1&amp;_t=ZS-91ijGrAhvzr" target="_blank" rel="noopener" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 3h-3.2v12.6a2.7 2.7 0 1 1-2.3-2.7v-3.3a6 6 0 1 0 5.5 6V9.4a7.7 7.7 0 0 0 4.4 1.4V7.6a4.4 4.4 0 0 1-4.4-4.4V3Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Navigate</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about-us/">About</a></li>
+            <li><a href="/our_products/">Our Products</a></li>
+            <li><a href="/contact-us/">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="/our_products/#asphalt">Asphalts</a></li>
+            <li><a href="/our_products/#crumb">Crumb Rubber</a></li>
+            <li><a href="/our_products/#mulch">Rubber Mulch</a></li>
+            <li><a href="/our_products/#tdf">Tire Derived Fuel</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Visit &amp; Call</h3>
+          <ul>
+            <li>Baghdad, Iraq</li>
+            <li>Open Hours: 7:30 AM&ndash;3:30 PM</li>
+            <li><a href="tel:+9647803113333">+(964) 780 311 3333</a></li>
+            <li><a href="mailto:contact@hammurabirecycling.com">contact@hammurabirecycling.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Hammurabi Golden Gate. All rights reserved.</span>
+        <span>Designed By <a href="https://nawras.tech" target="_blank" rel="noopener">nawras.tech</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!--
+    Optional consent notice — this site loads no cookies, analytics, or
+    ad trackers, so there is nothing to consent to today. Left here,
+    dormant, in case Google Analytics/Meta Pixel etc. get added later.
+    Delete this block (and .consent-bar in style.css) if not needed.
+  -->
+  <div class="consent-bar" data-visible="false" role="dialog" aria-label="Cookie notice">
+    <p>This site currently uses no cookies or tracking scripts — this notice is a placeholder for if that changes.</p>
+    <button class="btn btn--gold" data-consent-ack>Got it</button>
+  </div>
+
+  <script src="/assets/js/main.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--
+    Theme init — runs synchronously, before first paint, so there is no
+    flash of the wrong theme. Reads a saved preference if one exists;
+    otherwise follows the OS/browser's prefers-color-scheme. The toggle
+    button in the header (wired up in main.js) flips this later.
+  -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("hgg-theme");
+        var theme = saved || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    })();
+  </script>
+  <title>تواصل معنا — بوابة حمورابي الذهبية</title>
+  <meta name="description" content="تواصل مع بوابة حمورابي الذهبية في بغداد، العراق. اتصل على +(964) 780 311 3333 أو أرسل رسالة لطلب عرض سعر لمواد الإطارات المُعاد تدويرها.">
+  <link rel="canonical" href="https://hammurabirecycling.com/ar/contact-us/">
+  <link rel="alternate" hreflang="en" href="https://hammurabirecycling.com/contact-us/">
+  <link rel="alternate" hreflang="ar" href="https://hammurabirecycling.com/ar/contact-us/">
+  <link rel="alternate" hreflang="x-default" href="https://hammurabirecycling.com/contact-us/">
+
+  <!-- Favicons -->
+  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/images/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="alternate icon" href="/assets/images/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#14120F" id="theme-color-meta">
+
+  <!-- Open Graph / social previews (Facebook, WhatsApp, TikTok) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Hammurabi Golden Gate">
+  <meta property="og:title" content="تواصل مع بوابة حمورابي الذهبية">
+  <meta property="og:description" content="تواصل مع بوابة حمورابي الذهبية في بغداد، العراق. اتصل على +(964) 780 311 3333 أو أرسل رسالة لطلب عرض سعر لمواد الإطارات المُعاد تدويرها.">
+  <meta property="og:url" content="https://hammurabirecycling.com/ar/contact-us/">
+  <meta property="og:image" content="https://hammurabirecycling.com/assets/images/og-cover.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ar_IQ">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="تواصل مع بوابة حمورابي الذهبية">
+  <meta name="twitter:description" content="تواصل مع بوابة حمورابي الذهبية في بغداد، العراق. اتصل على +(964) 780 311 3333 أو أرسل رسالة لطلب عرض سعر لمواد الإطارات المُعاد تدويرها.">
+  <meta name="twitter:image" content="https://hammurabirecycling.com/assets/images/og-cover.webp">
+
+  <!-- Fonts: Fraunces/Inter/IBM Plex Mono for English, Noto Kufi Arabic /
+       IBM Plex Sans Arabic for Arabic — only the set this page needs is
+       loaded, kept lightweight. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Structured data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://hammurabirecycling.com/#organization",
+    "name": "بوابة حمورابي الذهبية",
+    "alternateName": "Hammurabi Golden Gate",
+    "url": "https://hammurabirecycling.com/ar/",
+    "logo": "https://hammurabirecycling.com/assets/images/logo-mark.svg",
+    "image": "https://hammurabirecycling.com/assets/images/og-cover.webp",
+    "description": "بوابة حمورابي الذهبية هي مصنع إعادة تدوير الإطارات في العراق، وتحوّل الإطارات المنتهية الصلاحية إلى حبيبات مطاطية ومهاد مطاطي ووقود مشتق من الإطارات (TDF) وصلب مستخلص باستخدام تقنيات تقطيع وتحبيب متقدمة.",
+    "telephone": "+964-780-311-3333",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "حي الجهاد",
+      "addressLocality": "بغداد",
+      "addressCountry": "IQ"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"],
+      "opens": "07:30",
+      "closes": "15:30"
+    },
+    "sameAs": [
+      "https://www.facebook.com/share/1CkGvnYvAS/?mibextid=wwXIfr",
+      "https://youtube.com/@hummrabicompany",
+      "https://www.tiktok.com/@hammurabigatefactory"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://hammurabirecycling.com/ar/"},{"@type":"ListItem","position":2,"name":"تواصل معنا","item":"https://hammurabirecycling.com/ar/contact-us/"}]}
+  </script>
+
+</head>
+<body>
+  <a class="skip-link" href="#main">تخطَّ إلى المحتوى</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/ar/">
+        <img src="/assets/images/logo-mark.svg" alt="" width="38" height="38">
+        <span class="brand-word">بوابة حمورابي الذهبية<small>إعادة تدوير الإطارات · العراق</small></span>
+      </a>
+
+      <nav class="main-nav" aria-label="التصفح الرئيسي">
+        <a href="/ar/" >الرئيسية</a>
+        <a href="/ar/about-us/" >من نحن</a>
+        <a href="/ar/our_products/" >منتجاتنا</a>
+        <a href="/ar/contact-us/" aria-current="page">تواصل معنا</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switch" aria-label="اللغة">
+          <a href="/contact-us/">EN</a>
+          <a href="/ar/contact-us/" aria-current="true">عربي</a>
+        </div>
+        <button class="theme-toggle" aria-label="التبديل إلى الوضع الفاتح">
+          <svg data-icon="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.5 12H2M22 12h-2.5M5.8 5.8l1.7 1.7M16.5 16.5l1.7 1.7M18.2 5.8l-1.7 1.7M7.5 16.5l-1.7 1.7"/></svg>
+          <svg data-icon="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+        </button>
+        <div class="social-row" aria-label="التواصل الاجتماعي">
+          <a href="https://www.facebook.com/share/1CkGvnYvAS/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="فيسبوك">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.5 1.6-1.5h1.7V3.3C16.5 3.2 15.4 3 14.2 3c-2.6 0-4.4 1.6-4.4 4.5v2.3H7v3.2h2.8v8h3.7Z"/></svg>
+          </a>
+          <a href="https://youtube.com/@hummrabicompany?si=nhWpqMXGx0K7RO59" target="_blank" rel="noopener" aria-label="يوتيوب">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12s0-3.2-.4-4.7a2.8 2.8 0 0 0-2-2C17.9 5 12 5 12 5s-5.9 0-7.6.3a2.8 2.8 0 0 0-2 2C2 8.8 2 12 2 12s0 3.2.4 4.7a2.8 2.8 0 0 0 2 2C6.1 19 12 19 12 19s5.9 0 7.6-.3a2.8 2.8 0 0 0 2-2C22 15.2 22 12 22 12ZM10 15.3V8.7l6 3.3-6 3.3Z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@hammurabigatefactory?_r=1&amp;_t=ZS-91ijGrAhvzr" target="_blank" rel="noopener" aria-label="تيك توك">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 3h-3.2v12.6a2.7 2.7 0 1 1-2.3-2.7v-3.3a6 6 0 1 0 5.5 6V9.4a7.7 7.7 0 0 0 4.4 1.4V7.6a4.4 4.4 0 0 1-4.4-4.4V3Z"/></svg>
+          </a>
+        </div>
+        <a class="btn btn--gold header-cta" href="/ar/contact-us/">اطلب عرض سعر</a>
+        <button class="nav-toggle" aria-label="فتح القائمة" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-drawer" data-open="false">
+    <div class="mobile-drawer__backdrop"></div>
+    <div class="mobile-drawer__panel" role="dialog" aria-modal="true" aria-label="قائمة التصفح للجوال">
+      <div class="mobile-drawer__top">
+        <a class="brand" href="/ar/">
+          <img src="/assets/images/logo-mark.svg" alt="" width="32" height="32">
+          <span class="brand-word" style="font-size:1rem;">بوابة حمورابي الذهبية</span>
+        </a>
+        <button class="mobile-drawer__close" aria-label="إغلاق القائمة">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <nav aria-label="التصفح للجوال">
+        <a href="/ar/" >الرئيسية</a>
+        <a href="/ar/about-us/" >من نحن</a>
+        <a href="/ar/our_products/" >منتجاتنا</a>
+        <a href="/ar/contact-us/" aria-current="page">تواصل معنا</a>
+      </nav>
+      <div class="mobile-drawer__meta">
+        <div class="mobile-drawer__lang">
+          <span>اللغة</span>
+          <div class="lang-switch">
+            <a href="/contact-us/">EN</a>
+            <a href="/ar/contact-us/" aria-current="true">عربي</a>
+          </div>
+        </div>
+        <div class="mobile-drawer__theme">
+          <span>المظهر</span>
+          <button class="theme-toggle" aria-label="التبديل إلى الوضع الفاتح">
+            <svg data-icon="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.5 12H2M22 12h-2.5M5.8 5.8l1.7 1.7M16.5 16.5l1.7 1.7M18.2 5.8l-1.7 1.7M7.5 16.5l-1.7 1.7"/></svg>
+            <svg data-icon="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+          </button>
+        </div>
+        <a href="tel:+9647803113333">+(964) 780 311 3333</a>
+        <a href="/ar/contact-us/" class="btn btn--gold btn--block">اطلب عرض سعر</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ================= PAGE HERO ================= -->
+    <section class="breadcrumb-hero">
+      <div class="container" data-reveal>
+        <span class="eyebrow">تواصل معنا</span>
+        <h1 style="margin-top:0.4em;">سنرد عليكم في أقرب وقت ممكن!</h1>
+      </div>
+    </section>
+
+    <hr class="threshold">
+
+    <!-- ================= CONTACT GRID ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="contact-grid">
+
+          <div data-reveal>
+            <span class="eyebrow">ساعات العمل</span>
+            <h2 style="margin-top:0.5em; font-size:var(--step-3);">ساعات العمل: <bdi>7:30</bdi> صباحًا&ndash;<bdi>3:30</bdi> مساءً</h2>
+
+            <div class="info-list">
+              <div class="info-item">
+                <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg></span>
+                <div>
+                  <h3>مواقعنا</h3>
+                  <ul class="location-list">
+                    <li><strong>الشركة:</strong> العراق، بغداد، حي الجهاد</li>
+                    <li><strong>الموقع 1:</strong> العراق، بغداد، التاجي، جسر الدوّار</li>
+                    <li><strong>الموقع 2:</strong> العراق، النجف، الحيدرية</li>
+                    <li><strong>الموقع 3:</strong> العراق، بغداد، مخزن أمانة بغداد</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 3a2 2 0 0 1-.5 2.1L7.9 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c1 .3 2 .5 3 .6a2 2 0 0 1 1.7 2Z"/></svg></span>
+                <div>
+                  <h3>اتصل بنا</h3>
+                  <p><a href="tel:+9647803113333"><bdi>+(964) 780 311 3333</bdi></a></p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></svg></span>
+                <div>
+                  <h3>راسلنا عبر البريد</h3>
+                  <p><a href="mailto:contact@hammurabirecycling.com"><bdi>contact@hammurabirecycling.com</bdi></a></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-row" style="margin-top:2rem;" aria-label="التواصل الاجتماعي">
+              <a href="https://www.facebook.com/share/1CkGvnYvAS/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="فيسبوك">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.5 1.6-1.5h1.7V3.3C16.5 3.2 15.4 3 14.2 3c-2.6 0-4.4 1.6-4.4 4.5v2.3H7v3.2h2.8v8h3.7Z"/></svg>
+              </a>
+              <a href="https://youtube.com/@hummrabicompany?si=nhWpqMXGx0K7RO59" target="_blank" rel="noopener" aria-label="يوتيوب">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12s0-3.2-.4-4.7a2.8 2.8 0 0 0-2-2C17.9 5 12 5 12 5s-5.9 0-7.6.3a2.8 2.8 0 0 0-2 2C2 8.8 2 12 2 12s0 3.2.4 4.7a2.8 2.8 0 0 0 2 2C6.1 19 12 19 12 19s5.9 0 7.6-.3a2.8 2.8 0 0 0 2-2C22 15.2 22 12 22 12ZM10 15.3V8.7l6 3.3-6 3.3Z"/></svg>
+              </a>
+              <a href="https://wa.me/9647803113333" target="_blank" rel="noopener" aria-label="واتساب">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20Zm4.4-5.9c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1.1-.4-2-1.3-.7-.6-1.2-1.4-1.4-1.7-.1-.2 0-.4.1-.5l.4-.5c.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5l-.7-1.7c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.8-1.2.2-.6.2-1 .1-1.2 0-.1-.2-.2-.5-.3Z"/></svg>
+              </a>
+              <a href="https://www.tiktok.com/@hammurabigatefactory?is_from_webapp=1&amp;sender_device=pc" target="_blank" rel="noopener" aria-label="تيك توك">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 3h-3.2v12.6a2.7 2.7 0 1 1-2.3-2.7v-3.3a6 6 0 1 0 5.5 6V9.4a7.7 7.7 0 0 0 4.4 1.4V7.6a4.4 4.4 0 0 1-4.4-4.4V3Z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- ============ FORM ============ -->
+          <div class="form-panel" data-reveal style="transition-delay:120ms;">
+            <span class="eyebrow" style="color:var(--brick);">أرسل رسالة</span>
+            <h3 style="margin-top:0.6em;">اطلب عرض سعر</h3>
+            <p style="margin-top:0.5rem; color:#5c5748;">أخبرنا بما تحتاجه وسنعاود التواصل معك في أقرب وقت ممكن.</p>
+
+            <!--
+              خدمة نموذج ثابتة: استبدل YOUR_FORM_ID بمعرّف نموذج Formspree
+              حقيقي (formspree.io -> إنشاء نموذج جديد -> انسخ مسار /f/xxxxxxx).
+              يعمل هذا النموذج بدون JavaScript (POST عادي مع إعادة توجيه)
+              ويتحسّن تلقائيًا عند تفعيل JavaScript (main.js) لعرض رسالة
+              نجاح/خطأ ضمن الصفحة دون الانتقال منها. راجع README.md.
+            -->
+            <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+              <input type="hidden" name="_subject" value="طلب عرض سعر جديد — hammurabirecycling.com">
+              <input type="hidden" name="_language" value="ar">
+              <!-- فخ للبريد العشوائي: لا يراه المستخدمون الحقيقيون أبدًا -->
+              <div class="hp-field" aria-hidden="true">
+                <label for="_gotcha_ar">اترك هذا الحقل فارغًا</label>
+                <input type="text" id="_gotcha_ar" name="_gotcha" tabindex="-1" autocomplete="off">
+              </div>
+
+              <div class="form-row two">
+                <div class="field required">
+                  <label for="name_ar">الاسم الكامل</label>
+                  <input type="text" id="name_ar" name="name" required autocomplete="name">
+                </div>
+                <div class="field required">
+                  <label for="email_ar">البريد الإلكتروني</label>
+                  <input type="email" id="email_ar" name="email" required autocomplete="email" dir="ltr">
+                </div>
+              </div>
+
+              <div class="form-row two">
+                <div class="field">
+                  <label for="phone_ar">رقم الهاتف</label>
+                  <input type="tel" id="phone_ar" name="phone" autocomplete="tel" dir="ltr">
+                </div>
+                <div class="field">
+                  <label for="company_ar">الشركة / المؤسسة</label>
+                  <input type="text" id="company_ar" name="company" autocomplete="organization">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="field required">
+                  <label for="message_ar">الرسالة</label>
+                  <textarea id="message_ar" name="message" required placeholder="أخبرنا عن المواد أو الكميات التي تهمّك…"></textarea>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <button type="submit" class="btn btn--dark btn--block">إرسال الرسالة</button>
+              </div>
+
+              <div class="form-status" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/ar/">
+            <img src="/assets/images/logo-mark.svg" alt="" width="34" height="34">
+            <span class="brand-word">بوابة حمورابي الذهبية</span>
+          </a>
+          <p>مصنع العراق لإعادة تدوير الإطارات — نحوّل الإطارات المنتهية الصلاحية إلى معدّلات أسفلت، ومطاط مطحون، ووقود مشتق من الإطارات.</p>
+          <div class="social-row" style="margin-top:1.5rem;" aria-label="التواصل الاجتماعي">
+            <a href="https://www.facebook.com/share/1CkGvnYvAS/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="فيسبوك">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.5 1.6-1.5h1.7V3.3C16.5 3.2 15.4 3 14.2 3c-2.6 0-4.4 1.6-4.4 4.5v2.3H7v3.2h2.8v8h3.7Z"/></svg>
+            </a>
+            <a href="https://youtube.com/@hummrabicompany?si=nhWpqMXGx0K7RO59" target="_blank" rel="noopener" aria-label="يوتيوب">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12s0-3.2-.4-4.7a2.8 2.8 0 0 0-2-2C17.9 5 12 5 12 5s-5.9 0-7.6.3a2.8 2.8 0 0 0-2 2C2 8.8 2 12 2 12s0 3.2.4 4.7a2.8 2.8 0 0 0 2 2C6.1 19 12 19 12 19s5.9 0 7.6-.3a2.8 2.8 0 0 0 2-2C22 15.2 22 12 22 12ZM10 15.3V8.7l6 3.3-6 3.3Z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@hammurabigatefactory?_r=1&amp;_t=ZS-91ijGrAhvzr" target="_blank" rel="noopener" aria-label="تيك توك">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 3h-3.2v12.6a2.7 2.7 0 1 1-2.3-2.7v-3.3a6 6 0 1 0 5.5 6V9.4a7.7 7.7 0 0 0 4.4 1.4V7.6a4.4 4.4 0 0 1-4.4-4.4V3Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>التصفح</h3>
+          <ul>
+            <li><a href="/ar/">الرئيسية</a></li>
+            <li><a href="/ar/about-us/">من نحن</a></li>
+            <li><a href="/ar/our_products/">منتجاتنا</a></li>
+            <li><a href="/ar/contact-us/">تواصل معنا</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>المنتجات</h3>
+          <ul>
+            <li><a href="/ar/our_products/#asphalt">الأسفلت</a></li>
+            <li><a href="/ar/our_products/#crumb">المطاط المطحون</a></li>
+            <li><a href="/ar/our_products/#mulch">المهاد المطاطي</a></li>
+            <li><a href="/ar/our_products/#tdf">الوقود المشتق من الإطارات</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>زورونا واتصلوا</h3>
+          <ul>
+            <li>بغداد، العراق</li>
+            <li>ساعات العمل: 7:30 صباحًا&ndash;3:30 مساءً</li>
+            <li><a href="tel:+9647803113333" dir="ltr" style="unicode-bidi:isolate;">+(964) 780 311 3333</a></li>
+            <li><a href="mailto:contact@hammurabirecycling.com" dir="ltr" style="unicode-bidi:isolate;">contact@hammurabirecycling.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> بوابة حمورابي الذهبية. جميع الحقوق محفوظة.</span>
+        <span>صمم بواسطة <a href="https://nawras.tech" target="_blank" rel="noopener" dir="ltr" style="unicode-bidi:isolate;">nawras.tech</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!--
+    إشعار موافقة اختياري — هذا الموقع لا يستخدم حاليًا أي ملفات تعريف
+    ارتباط أو أدوات تتبع، لذا لا يوجد ما يستدعي طلب الموافقة الآن. تُرك
+    هذا العنصر معطّلاً تحسبًا لإضافة أدوات تحليل لاحقًا (مثل Google
+    Analytics). احذف هذا القسم (و.consent-bar من style.css) إذا لم تكن
+    بحاجة إليه.
+  -->
+  <div class="consent-bar" data-visible="false" role="dialog" aria-label="إشعار ملفات تعريف الارتباط">
+    <p>لا يستخدم هذا الموقع حاليًا أي ملفات تعريف ارتباط أو نصوص تتبع — هذا الإشعار مجرد نموذج احتياطي في حال تغيّر ذلك مستقبلًا.</p>
+    <button class="btn btn--gold" data-consent-ack>حسنًا</button>
+  </div>
+
+  <script src="/assets/js/main.js" defer></script>
+
+</body>
+</html>

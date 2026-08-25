@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--
+    Theme init — runs synchronously, before first paint, so there is no
+    flash of the wrong theme. Reads a saved preference if one exists;
+    otherwise follows the OS/browser's prefers-color-scheme. The toggle
+    button in the header (wired up in main.js) flips this later.
+  -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("hgg-theme");
+        var theme = saved || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    })();
+  </script>
+  <title>بوابة حمورابي الذهبية — مصنع إعادة تدوير الإطارات، العراق</title>
+  <meta name="description" content="بوابة حمورابي الذهبية هي مصنع إعادة تدوير الإطارات في العراق، تحوّل الإطارات المنتهية الصلاحية إلى حبيبات مطاطية ومهاد مطاطي ووقود مشتق من الإطارات وصلب مستخلص. إعادة تدوير متقدمة من أجل غدٍ أفضل.">
+  <link rel="canonical" href="https://hammurabirecycling.com/ar/">
+  <link rel="alternate" hreflang="en" href="https://hammurabirecycling.com/">
+  <link rel="alternate" hreflang="ar" href="https://hammurabirecycling.com/ar/">
+  <link rel="alternate" hreflang="x-default" href="https://hammurabirecycling.com/">
+
+  <!-- Favicons -->
+  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/images/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="alternate icon" href="/assets/images/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#14120F" id="theme-color-meta">
+
+  <!-- Open Graph / social previews (Facebook, WhatsApp, TikTok) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Hammurabi Golden Gate">
+  <meta property="og:title" content="بوابة حمورابي الذهبية — إعادة تدوير متقدمة للإطارات من أجل غدٍ أفضل">
+  <meta property="og:description" content="بوابة حمورابي الذهبية هي مصنع إعادة تدوير الإطارات في العراق، تحوّل الإطارات المنتهية الصلاحية إلى حبيبات مطاطية ومهاد مطاطي ووقود مشتق من الإطارات وصلب مستخلص. إعادة تدوير متقدمة من أجل غدٍ أفضل.">
+  <meta property="og:url" content="https://hammurabirecycling.com/ar/">
+  <meta property="og:image" content="https://hammurabirecycling.com/assets/images/og-cover.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ar_IQ">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="بوابة حمورابي الذهبية — إعادة تدوير متقدمة للإطارات من أجل غدٍ أفضل">
+  <meta name="twitter:description" content="بوابة حمورابي الذهبية هي مصنع إعادة تدوير الإطارات في العراق، تحوّل الإطارات المنتهية الصلاحية إلى حبيبات مطاطية ومهاد مطاطي ووقود مشتق من الإطارات وصلب مستخلص. إعادة تدوير متقدمة من أجل غدٍ أفضل.">
+  <meta name="twitter:image" content="https://hammurabirecycling.com/assets/images/og-cover.webp">
+
+  <!-- Fonts: Fraunces/Inter/IBM Plex Mono for English, Noto Kufi Arabic /
+       IBM Plex Sans Arabic for Arabic — only the set this page needs is
+       loaded, kept lightweight. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Structured data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://hammurabirecycling.com/#organization",
+    "name": "بوابة حمورابي الذهبية",
+    "alternateName": "Hammurabi Golden Gate",
+    "url": "https://hammurabirecycling.com/ar/",
+    "logo": "https://hammurabirecycling.com/assets/images/logo-mark.svg",
+    "image": "https://hammurabirecycling.com/assets/images/og-cover.webp",
+    "description": "بوابة حمورابي الذهبية هي مصنع إعادة تدوير الإطارات في العراق، وتحوّل الإطارات المنتهية الصلاحية إلى حبيبات مطاطية ومهاد مطاطي ووقود مشتق من الإطارات (TDF) وصلب مستخلص باستخدام تقنيات تقطيع وتحبيب متقدمة.",
+    "telephone": "+964-780-311-3333",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "حي الجهاد",
+      "addressLocality": "بغداد",
+      "addressCountry": "IQ"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"],
+      "opens": "07:30",
+      "closes": "15:30"
+    },
+    "sameAs": [
+      "https://www.facebook.com/share/1CkGvnYvAS/?mibextid=wwXIfr",
+      "https://youtube.com/@hummrabicompany",
+      "https://www.tiktok.com/@hammurabigatefactory"
+    ]
+  }
+  </script>
+
+  
+
+</head>
+<body>
+  <a class="skip-link" href="#main">تخطَّ إلى المحتوى</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/ar/">
+        <img src="/assets/images/logo-mark.svg" alt="" width="38" height="38">
+        <span class="brand-word">بوابة حمورابي الذهبية<small>إعادة تدوير الإطارات · العراق</small></span>
+      </a>
+
+      <nav class="main-nav" aria-label="التصفح الرئيسي">
+        <a href="/ar/" aria-current="page">الرئيسية</a>
+        <a href="/ar/about-us/" >من نحن</a>
+        <a href="/ar/our_products/" >منتجاتنا</a>
+        <a href="/ar/contact-us/" >تواصل معنا</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switch" aria-label="اللغة">
+          <a href="/">EN</a>
+          <a href="/ar/" aria-current="true">عربي</a>
+        </div>
+        <button class="theme-toggle" aria-label="التبديل إلى الوضع الفاتح">
+          <svg data-icon="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.5 12H2M22 12h-2.5M5.8 5.8l1.7 1.7M16.5 16.5l1.7 1.7M18.2 5.8l-1.7 1.7M7.5 16.5l-1.7 1.7"/></svg>
+          <svg data-icon="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+        </button>
+        <div class="social-row" aria-label="التواصل الاجتماعي">
+          <a href="https://www.facebook.com/share/1CkGvnYvAS/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="فيسبوك">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.5 1.6-1.5h1.7V3.3C16.5 3.2 15.4 3 14.2 3c-2.6 0-4.4 1.6-4.4 4.5v2.3H7v3.2h2.8v8h3.7Z"/></svg>
+          </a>
+          <a href="https://youtube.com/@hummrabicompany?si=nhWpqMXGx0K7RO59" target="_blank" rel="noopener" aria-label="يوتيوب">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12s0-3.2-.4-4.7a2.8 2.8 0 0 0-2-2C17.9 5 12 5 12 5s-5.9 0-7.6.3a2.8 2.8 0 0 0-2 2C2 8.8 2 12 2 12s0 3.2.4 4.7a2.8 2.8 0 0 0 2 2C6.1 19 12 19 12 19s5.9 0 7.6-.3a2.8 2.8 0 0 0 2-2C22 15.2 22 12 22 12ZM10 15.3V8.7l6 3.3-6 3.3Z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@hammurabigatefactory?_r=1&amp;_t=ZS-91ijGrAhvzr" target="_blank" rel="noopener" aria-label="تيك توك">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 3h-3.2v12.6a2.7 2.7 0 1 1-2.3-2.7v-3.3a6 6 0 1 0 5.5 6V9.4a7.7 7.7 0 0 0 4.4 1.4V7.6a4.4 4.4 0 0 1-4.4-4.4V3Z"/></svg>
+          </a>
+        </div>
+        <a class="btn btn--gold header-cta" href="/ar/contact-us/">اطلب عرض سعر</a>
+        <button class="nav-toggle" aria-label="فتح القائمة" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-drawer" data-open="false">
+    <div class="mobile-drawer__backdrop"></div>
+    <div class="mobile-drawer__panel" role="dialog" aria-modal="true" aria-label="قائمة التصفح للجوال">
+      <div class="mobile-drawer__top">
+        <a class="brand" href="/ar/">
+          <img src="/assets/images/logo-mark.svg" alt="" width="32" height="32">
+          <span class="brand-word" style="font-size:1rem;">بوابة حمورابي الذهبية</span>
+        </a>
+        <button class="mobile-drawer__close" aria-label="إغلاق القائمة">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <nav aria-label="التصفح للجوال">
+        <a href="/ar/" aria-current="page">الرئيسية</a>
+        <a href="/ar/about-us/" >من نحن</a>
+        <a href="/ar/our_products/" >منتجاتنا</a>
+        <a href="/ar/contact-us/" >تواصل معنا</a>
+      </nav>
+      <div class="mobile-drawer__meta">
+        <div class="mobile-drawer__lang">
+          <span>اللغة</span>
+          <div class="lang-switch">
+            <a href="/">EN</a>
+            <a href="/ar/" aria-current="true">عربي</a>
+          </div>
+        </div>
+        <div class="mobile-drawer__theme">
+          <span>المظهر</span>
+          <button class="theme-toggle" aria-label="التبديل إلى الوضع الفاتح">
+            <svg data-icon="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.5 12H2M22 12h-2.5M5.8 5.8l1.7 1.7M16.5 16.5l1.7 1.7M18.2 5.8l-1.7 1.7M7.5 16.5l-1.7 1.7"/></svg>
+            <svg data-icon="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+          </button>
+        </div>
+        <a href="tel:+9647803113333">+(964) 780 311 3333</a>
+        <a href="/ar/contact-us/" class="btn btn--gold btn--block">اطلب عرض سعر</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="container">
+        <div data-reveal>
+          <span class="eyebrow">أول مصنع لإعادة تدوير الإطارات في العراق</span>
+          <h1>بوابة حمورابي<br>الذهبية</h1>
+          <p class="lede">إعادة تدوير متقدمة للإطارات من أجل غدٍ أفضل</p>
+          <p>نعتمد على أحدث تقنيات إعادة التدوير لتحويل الإطارات المنتهية الصلاحية إلى مجموعة من المنتجات المفيدة. صُمم مصنعنا لتحقيق أقصى قدر من الكفاءة والنظافة واسترجاع الموارد.</p>
+          <div class="btn-row">
+            <a class="btn btn--gold" href="#process">اعرف المزيد</a>
+            <a class="btn btn--ghost" href="/ar/contact-us/">اطلب عرض سعر</a>
+          </div>
+          <dl class="hero-stats">
+            <div><dt>الموقع</dt><dd>بغداد، العراق</dd></div>
+            <div><dt>المنتجات الأساسية</dt><dd>مطاط، وقود بديل، صلب</dd></div>
+            <div><dt>ساعات العمل</dt><dd><bdi>7:30&ndash;3:30</bdi></dd></div>
+          </dl>
+        </div>
+        <div class="hero-visual" data-reveal style="transition-delay:120ms;">
+          <picture>
+            <source srcset="/assets/images/hero-factory.webp" type="image/webp">
+            <img src="/assets/images/hero-factory.webp" alt="منشأة بوابة حمورابي الذهبية لإعادة تدوير الإطارات، بغداد" width="1600" height="1000" loading="eager" fetchpriority="high">
+          </picture>
+          <div class="badge">
+            <span><strong>إطارات منتهية الصلاحية</strong><span>المدخلات</span></span>
+            <span style="text-align:end;"><strong>مواد عالية القيمة</strong><span>المخرجات</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="threshold">
+
+    <!-- ================= PROCESS ================= -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">عمليتنا</span>
+          <h2>أربع مراحل، نظام دائري واحد</h2>
+          <p>يمر كل إطار يدخل منشأتنا بنفس المسار المغلق — من الجمع على طرقات العراق إلى مادة نهائية جاهزة للسوق.</p>
+        </div>
+
+        <div class="process-grid" data-reveal-group>
+          <article class="process-step" data-reveal>
+            <div class="thumb">
+              <picture>
+                <source srcset="/assets/images/collecting.webp" type="image/webp">
+                <img src="/assets/images/collecting.webp" alt="جمع وفرز الإطارات المستعملة" width="1200" height="900" loading="lazy">
+              </picture>
+            </div>
+            <div class="plate">01</div>
+            <h3>التجميع والفرز</h3>
+            <p>نقوم بجمع الإطارات المستعملة بعناية من مصادر متعددة في جميع أنحاء العراق، مع ضمان الفرز الدقيق والصحيح.</p>
+          </article>
+
+          <article class="process-step" data-reveal>
+            <div class="thumb">
+              <picture>
+                <source srcset="/assets/images/shreding.webp" type="image/webp">
+                <img src="/assets/images/shreding.webp" alt="آلة تقطيع صناعية تُفتّت الإطارات" width="1200" height="900" loading="lazy">
+              </picture>
+            </div>
+            <div class="plate">02</div>
+            <h3>التقطيع</h3>
+            <p>تُغذّى الإطارات في آلات تقطيع قوية، لتتحول إلى قطع أصغر جاهزة للمرحلة التالية وهي الطحن.</p>
+          </article>
+
+          <article class="process-step" data-reveal>
+            <div class="thumb">
+              <picture>
+                <source srcset="/assets/images/grinding.webp" type="image/webp">
+                <img src="/assets/images/grinding.webp" alt="حبيبات المطاط بعد الطحن، مع إزالة الصلب والنسيج" width="1200" height="900" loading="lazy">
+              </picture>
+            </div>
+            <div class="plate">03</div>
+            <h3>الطحن والتحبيب</h3>
+            <p>تُعالج هذه القطع المقطّعة إلى حبيبات بأحجام مختلفة، مع إزالة الصلب والنسيج.</p>
+          </article>
+
+          <article class="process-step" data-reveal>
+            <div class="thumb">
+              <picture>
+                <source srcset="/assets/images/gg.webp" type="image/webp">
+                <img src="/assets/images/gg.webp" alt="المنتجات النهائية من المطاط المُعاد تدويره" width="1200" height="900" loading="lazy">
+              </picture>
+            </div>
+            <div class="plate">04</div>
+            <h3>إنتاج المنتجات</h3>
+            <p>تُستخدم حبيبات ومسحوق المطاط الناتجة بعد ذلك لصنع مجموعة متنوعة من المنتجات القيّمة.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="gate-divider" aria-hidden="true">
+      <svg viewBox="0 0 64 64" fill="none"><path d="M18 46V27M46 46V27M15 27H49M12.5 20.5H51.5M22 46H42" stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round"/></svg>
+    </div>
+
+    <!-- ================= PRODUCTS ================= -->
+    <section class="section section--raised" id="products">
+      <div class="container">
+        <div class="section-head center" data-reveal>
+          <span class="eyebrow">منتجاتنا</span>
+          <h2>من النفايات إلى القيمة</h2>
+          <p>نحوّل الإطارات المستهلكة إلى مواد عالية الطلب، تشمل:</p>
+        </div>
+
+        <div class="products-grid" data-reveal-group>
+          <div class="product-card" data-reveal>
+            <div class="product-photo">
+              <span class="ring" aria-hidden="true"></span>
+              <picture>
+                <source srcset="/assets/images/CirclePhoto_SmartMIX.webp" type="image/webp">
+                <img src="/assets/images/CirclePhoto_SmartMIX.webp" alt="أسفلت مطاطي" width="800" height="800" loading="lazy">
+              </picture>
+            </div>
+            <span class="index">01</span>
+            <h3>الأسفلت</h3>
+          </div>
+          <div class="product-card" data-reveal>
+            <div class="product-photo">
+              <span class="ring" aria-hidden="true"></span>
+              <picture>
+                <source srcset="/assets/images/CirclePhoto_Crumb.webp" type="image/webp">
+                <img src="/assets/images/CirclePhoto_Crumb.webp" alt="حبيبات المطاط المطحون" width="800" height="800" loading="lazy">
+              </picture>
+            </div>
+            <span class="index">02</span>
+            <h3>المطاط المطحون</h3>
+          </div>
+          <div class="product-card" data-reveal>
+            <div class="product-photo">
+              <span class="ring" aria-hidden="true"></span>
+              <picture>
+                <source srcset="/assets/images/CirclePhoto_TDF.webp" type="image/webp">
+                <img src="/assets/images/CirclePhoto_TDF.webp" alt="الوقود المشتق من الإطارات" width="800" height="800" loading="lazy">
+              </picture>
+            </div>
+            <span class="index">03</span>
+            <h3>الوقود المشتق من الإطارات</h3>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top:3rem;" data-reveal>
+          <a class="btn btn--gold" href="/ar/contact-us/">اطلب عرض سعر</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VIDEO SHOWCASE ================= -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">شاهدها في العمل</span>
+          <h2>داخل المصنع</h2>
+        </div>
+        <div class="video-showcase" data-reveal>
+          <video
+            src="/assets/video/process-loop.mp4"
+            poster="/assets/images/video-poster.webp"
+            muted loop playsinline preload="metadata"
+            aria-label="لقطات صامتة متكررة لعملية إعادة تدوير الإطارات">
+          </video>
+          <button class="play-toggle" aria-label="إيقاف الفيديو الخلفي">
+            <svg data-icon="pause" viewBox="0 0 24 24" fill="currentColor" style="display:block;"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg>
+            <svg data-icon="play" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><path d="M8 5v14l11-7Z"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHY CHOOSE US ================= -->
+    <section class="section section--raised">
+      <div class="container">
+        <div class="section-head center" data-reveal>
+          <span class="eyebrow">مزايانا</span>
+          <h2>لماذا تختارنا</h2>
+        </div>
+
+        <div class="why-grid" data-reveal-group>
+          <div class="why-card" data-reveal>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3c4 2.5 7 4 7 9a7 7 0 0 1-14 0c0-5 3-6.5 7-9Z"/><path d="M12 9v8M9 13c1 1 4 1 6-1"/></svg>
+            </div>
+            <h3>الحفاظ على البيئة</h3>
+          </div>
+          <div class="why-card" data-reveal>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>
+            </div>
+            <h3>المساهمة الاقتصادية</h3>
+          </div>
+          <div class="why-card" data-reveal>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M8 12h.01M16 12h.01M9 8l1.5-3h3L15 8M6 12a2 2 0 0 0-2 2v3h16v-3a2 2 0 0 0-2-2"/><path d="M5 17v2m14-2v2"/></svg>
+            </div>
+            <h3>شراكة موثوقة</h3>
+          </div>
+          <div class="why-card" data-reveal>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1Z"/></svg>
+            </div>
+            <h3>تقنية متقدمة</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head center" data-reveal>
+          <span class="eyebrow">آراء العملاء</span>
+          <h2>شهادات العملاء</h2>
+          <p>نفخر بشراكتنا مع كبرى الصناعات والبلديات والشركات المحلية في جميع أنحاء العراق. إليكم آراؤهم حول منتجاتنا المستدامة والتزامنا ببناء مستقبل أنظف.</p>
+        </div>
+
+        <div class="testimonial-track" data-reveal-group>
+          <blockquote class="testimonial" data-reveal>
+            <q>كانت حبيبات المطاط التي حصلنا عليها من هنا لمشروع أرضيات رياضية ذات جودة استثنائية. من المشجع رؤية مواد بناء عالية المعايير تُصنَّع محليًا في العراق. مورد موثوق نخطط للتعامل معه مرة أخرى.</q>
+            <cite>أحمد السعدي، مدير مشروع<span>شركة البصرة للإنشاءات</span></cite>
+          </blockquote>
+          <blockquote class="testimonial" data-reveal>
+            <q>ساعدنا التحول إلى الوقود المشتق من الإطارات (TDF) من هذا المصنع على خفض تكاليف الطاقة بشكل كبير في مصنع الإسمنت لدينا. سلسلة التوريد لديهم منتظمة، وجودة الوقود تلبي جميع متطلباتنا الفنية.</q>
+            <cite>مدير العمليات<span>مجموعة بغداد الصناعية</span></cite>
+          </blockquote>
+          <blockquote class="testimonial" data-reveal>
+            <q>هذا المصنع يحل مشكلة نفايات حرجة لمدينتنا. من خلال إخلاء مواقع تجميع الإطارات بكفاءة، ساعدونا في القضاء على مخاطر الحرائق وتحسين الصحة البيئية في منطقتنا. شريك أساسي للسلامة العامة.</q>
+            <cite>عضو مجلس بلدي محلي</cite>
+          </blockquote>
+          <blockquote class="testimonial" data-reveal>
+            <q>قمنا بتركيب بلاطهم المطاطي في ملعب مدرستنا الجديد، والفرق في السلامة مذهل. معرفة أن هذه المنتجات مُعاد تدويرها من النفايات ومصنوعة في بلدنا يجعلنا نفخر بدعم هذه الصناعة الوطنية.</q>
+            <cite>سارة ج.<span>مديرة مدرسة</span></cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT STRIP ================= -->
+    <section class="section section--tight section--raised">
+      <div class="container">
+        <div class="cta-band" data-reveal>
+          <div>
+            <span class="eyebrow">زورونا</span>
+            <h2>بغداد، العراق</h2>
+            <p style="margin-top:0.75rem;">ساعات العمل: <bdi>7:30</bdi> صباحًا&ndash;<bdi>3:30</bdi> مساءً &nbsp;&middot;&nbsp; <a href="tel:+9647803113333" style="color:var(--on-image-gold);"><bdi>+(964) 780 311 3333</bdi></a></p>
+          </div>
+          <a class="btn btn--gold" href="/ar/contact-us/">تواصل معنا</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/ar/">
+            <img src="/assets/images/logo-mark.svg" alt="" width="34" height="34">
+            <span class="brand-word">بوابة حمورابي الذهبية</span>
+          </a>
+          <p>مصنع العراق لإعادة تدوير الإطارات — نحوّل الإطارات المنتهية الصلاحية إلى معدّلات أسفلت، ومطاط مطحون، ووقود مشتق من الإطارات.</p>
+          <div class="social-row" style="margin-top:1.5rem;" aria-label="التواصل الاجتماعي">
+            <a href="https://www.facebook.com/share/1CkGvnYvAS/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="فيسبوك">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.5 1.6-1.5h1.7V3.3C16.5 3.2 15.4 3 14.2 3c-2.6 0-4.4 1.6-4.4 4.5v2.3H7v3.2h2.8v8h3.7Z"/></svg>
+            </a>
+            <a href="https://youtube.com/@hummrabicompany?si=nhWpqMXGx0K7RO59" target="_blank" rel="noopener" aria-label="يوتيوب">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12s0-3.2-.4-4.7a2.8 2.8 0 0 0-2-2C17.9 5 12 5 12 5s-5.9 0-7.6.3a2.8 2.8 0 0 0-2 2C2 8.8 2 12 2 12s0 3.2.4 4.7a2.8 2.8 0 0 0 2 2C6.1 19 12 19 12 19s5.9 0 7.6-.3a2.8 2.8 0 0 0 2-2C22 15.2 22 12 22 12ZM10 15.3V8.7l6 3.3-6 3.3Z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@hammurabigatefactory?_r=1&amp;_t=ZS-91ijGrAhvzr" target="_blank" rel="noopener" aria-label="تيك توك">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 3h-3.2v12.6a2.7 2.7 0 1 1-2.3-2.7v-3.3a6 6 0 1 0 5.5 6V9.4a7.7 7.7 0 0 0 4.4 1.4V7.6a4.4 4.4 0 0 1-4.4-4.4V3Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>التصفح</h3>
+          <ul>
+            <li><a href="/ar/">الرئيسية</a></li>
+            <li><a href="/ar/about-us/">من نحن</a></li>
+            <li><a href="/ar/our_products/">منتجاتنا</a></li>
+            <li><a href="/ar/contact-us/">تواصل معنا</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>المنتجات</h3>
+          <ul>
+            <li><a href="/ar/our_products/#asphalt">الأسفلت</a></li>
+            <li><a href="/ar/our_products/#crumb">المطاط المطحون</a></li>
+            <li><a href="/ar/our_products/#mulch">المهاد المطاطي</a></li>
+            <li><a href="/ar/our_products/#tdf">الوقود المشتق من الإطارات</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>زورونا واتصلوا</h3>
+          <ul>
+            <li>بغداد، العراق</li>
+            <li>ساعات العمل: 7:30 صباحًا&ndash;3:30 مساءً</li>
+            <li><a href="tel:+9647803113333" dir="ltr" style="unicode-bidi:isolate;">+(964) 780 311 3333</a></li>
+            <li><a href="mailto:contact@hammurabirecycling.com" dir="ltr" style="unicode-bidi:isolate;">contact@hammurabirecycling.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> بوابة حمورابي الذهبية. جميع الحقوق محفوظة.</span>
+        <span>صمم بواسطة <a href="https://nawras.tech" target="_blank" rel="noopener" dir="ltr" style="unicode-bidi:isolate;">nawras.tech</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!--
+    إشعار موافقة اختياري — هذا الموقع لا يستخدم حاليًا أي ملفات تعريف
+    ارتباط أو أدوات تتبع، لذا لا يوجد ما يستدعي طلب الموافقة الآن. تُرك
+    هذا العنصر معطّلاً تحسبًا لإضافة أدوات تحليل لاحقًا (مثل Google
+    Analytics). احذف هذا القسم (و.consent-bar من style.css) إذا لم تكن
+    بحاجة إليه.
+  -->
+  <div class="consent-bar" data-visible="false" role="dialog" aria-label="إشعار ملفات تعريف الارتباط">
+    <p>لا يستخدم هذا الموقع حاليًا أي ملفات تعريف ارتباط أو نصوص تتبع — هذا الإشعار مجرد نموذج احتياطي في حال تغيّر ذلك مستقبلًا.</p>
+    <button class="btn btn--gold" data-consent-ack>حسنًا</button>
+  </div>
+
+  <script src="/assets/js/main.js" defer></script>
+
+</body>
+</html>

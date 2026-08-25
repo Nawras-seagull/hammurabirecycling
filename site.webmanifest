@@ -1,0 +1,13 @@
+{
+  "name": "Hammurabi Golden Gate",
+  "short_name": "Hammurabi Gate",
+  "description": "Iraq's tire recycling factory — advanced tire recycling for a better tomorrow.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#14120F",
+  "theme_color": "#14120F",
+  "icons": [
+    { "src": "/assets/images/favicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/images/favicon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
