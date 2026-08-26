@@ -203,9 +203,12 @@
         </div>
         <div class="hero-visual" data-reveal style="transition-delay:120ms;">
           <picture>
-            <source srcset="/assets/images/hero-factory.webp" type="image/webp">
-            <img src="/assets/images/hero-factory.webp" alt="منشأة بوابة حمورابي الذهبية لإعادة تدوير الإطارات، بغداد" width="1600" height="1000" loading="eager" fetchpriority="high">
+            <source srcset="/assets/images/hero-factory-ar.webp" type="image/webp">
+            <img src="/assets/images/hero-factory-ar.webp" alt="منشأة بوابة حمورابي الذهبية لإعادة تدوير الإطارات، بغداد" width="1600" height="1000" loading="eager" fetchpriority="high">
           </picture>
+            <video autoplay muted loop playsinline poster="/assets/images/video-poster.webp">
+  <source src="/assets/images/hero.mp4" type="video/mp4">
+</video>
           <div class="badge">
             <span><strong>إطارات منتهية الصلاحية</strong><span>المدخلات</span></span>
             <span style="text-align:end;"><strong>مواد عالية القيمة</strong><span>المخرجات</span></span>
@@ -278,78 +281,76 @@
     </section>
 
     <div class="gate-divider" aria-hidden="true">
-      <svg viewBox="0 0 64 64" fill="none"><path d="M18 46V27M46 46V27M15 27H49M12.5 20.5H51.5M22 46H42" stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <img src="/assets/images/logo.png" alt="Company Logo" width="64" height="64">
     </div>
 
-    <!-- ================= PRODUCTS ================= -->
+    <!-- ================= PRODUCTS + VIDEO SHOWCASE ================= -->
     <section class="section section--raised" id="products">
       <div class="container">
-        <div class="section-head center" data-reveal>
-          <span class="eyebrow">منتجاتنا</span>
-          <h2>من النفايات إلى القيمة</h2>
-          <p>نحوّل الإطارات المستهلكة إلى مواد عالية الطلب، تشمل:</p>
-        </div>
-
-        <div class="products-grid" data-reveal-group>
-          <div class="product-card" data-reveal>
-            <div class="product-photo">
-              <span class="ring" aria-hidden="true"></span>
-              <picture>
-                <source srcset="/assets/images/CirclePhoto_SmartMIX.webp" type="image/webp">
-                <img src="/assets/images/CirclePhoto_SmartMIX.webp" alt="أسفلت مطاطي" width="800" height="800" loading="lazy">
-              </picture>
+        <div class="product-video-layout">
+          <div class="products-panel" data-reveal>
+            <div class="section-head">
+              <span class="eyebrow">منتجاتنا</span>
+              <h2>من النفايات إلى القيمة</h2>
+              <p>نحوّل الإطارات المستهلكة إلى مواد عالية الطلب، تشمل:</p>
             </div>
-            <span class="index">01</span>
-            <h3>الأسفلت</h3>
-          </div>
-          <div class="product-card" data-reveal>
-            <div class="product-photo">
-              <span class="ring" aria-hidden="true"></span>
-              <picture>
-                <source srcset="/assets/images/CirclePhoto_Crumb.webp" type="image/webp">
-                <img src="/assets/images/CirclePhoto_Crumb.webp" alt="حبيبات المطاط المطحون" width="800" height="800" loading="lazy">
-              </picture>
-            </div>
-            <span class="index">02</span>
-            <h3>المطاط المطحون</h3>
-          </div>
-          <div class="product-card" data-reveal>
-            <div class="product-photo">
-              <span class="ring" aria-hidden="true"></span>
-              <picture>
-                <source srcset="/assets/images/CirclePhoto_TDF.webp" type="image/webp">
-                <img src="/assets/images/CirclePhoto_TDF.webp" alt="الوقود المشتق من الإطارات" width="800" height="800" loading="lazy">
-              </picture>
-            </div>
-            <span class="index">03</span>
-            <h3>الوقود المشتق من الإطارات</h3>
-          </div>
-        </div>
 
-        <div class="text-center" style="margin-top:3rem;" data-reveal>
-          <a class="btn btn--gold" href="/ar/contact-us/">اطلب عرض سعر</a>
-        </div>
-      </div>
-    </section>
+            <div class="products-grid" data-reveal-group>
+              <div class="product-card" data-reveal>
+                <div class="product-photo">
+                  <span class="ring" aria-hidden="true"></span>
+                  <picture>
+                    <source srcset="/assets/images/CirclePhoto_SmartMIX.webp" type="image/webp">
+                    <img src="/assets/images/CirclePhoto_SmartMIX.webp" alt="أسفلت مطاطي" width="800" height="800" loading="lazy">
+                  </picture>
+                </div>
+                <span class="index">01</span>
+                <h3>الأسفلت</h3>
+              </div>
+              <div class="product-card" data-reveal>
+                <div class="product-photo">
+                  <span class="ring" aria-hidden="true"></span>
+                  <picture>
+                    <source srcset="/assets/images/CirclePhoto_Crumb.webp" type="image/webp">
+                    <img src="/assets/images/CirclePhoto_Crumb.webp" alt="حبيبات المطاط المطحون" width="800" height="800" loading="lazy">
+                  </picture>
+                </div>
+                <span class="index">02</span>
+                <h3>المطاط المطحون</h3>
+              </div>
+              <div class="product-card" data-reveal>
+                <div class="product-photo">
+                  <span class="ring" aria-hidden="true"></span>
+                  <picture>
+                    <source srcset="/assets/images/CirclePhoto_TDF.webp" type="image/webp">
+                    <img src="/assets/images/CirclePhoto_TDF.webp" alt="الوقود المشتق من الإطارات" width="800" height="800" loading="lazy">
+                  </picture>
+                </div>
+                <span class="index">03</span>
+                <h3>الوقود المشتق من الإطارات</h3>
+              </div>
+            </div>
 
-    <!-- ================= VIDEO SHOWCASE ================= -->
-    <section class="section section--tight">
-      <div class="container">
-        <div class="section-head" data-reveal>
-          <span class="eyebrow">شاهدها في العمل</span>
-          <h2>داخل المصنع</h2>
-        </div>
-        <div class="video-showcase" data-reveal>
-          <video
-            src="/assets/video/process-loop.mp4"
-            poster="/assets/images/video-poster.webp"
-            muted loop playsinline preload="metadata"
-            aria-label="لقطات صامتة متكررة لعملية إعادة تدوير الإطارات">
-          </video>
-          <button class="play-toggle" aria-label="إيقاف الفيديو الخلفي">
-            <svg data-icon="pause" viewBox="0 0 24 24" fill="currentColor" style="display:block;"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg>
-            <svg data-icon="play" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><path d="M8 5v14l11-7Z"/></svg>
-          </button>
+            <div style="margin-top:3rem;" data-reveal>
+              <a class="btn btn--gold" href="/ar/contact-us/">اطلب عرض سعر</a>
+            </div>
+          </div>
+
+          <div class="facility-panel" data-reveal>
+            <div class="section-head">
+              <span class="eyebrow">شاهدها في العمل</span>
+              <h2>داخل المصنع</h2>
+            </div>
+            <div class="video-showcase">
+              <video autoplay muted loop playsinline poster="/assets/images/video-poster.webp">
+                <source src="/assets/images/factory-web.mp4" type="video/mp4">
+              </video>
+              <button class="play-toggle" aria-label="إيقاف الفيديو الخلفي">
+                <svg data-icon="pause" viewBox="0 0 24 24" fill="currentColor" style="display:block;"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg>
+                <svg data-icon="play" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><path d="M8 5v14l11-7Z"/></svg>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>

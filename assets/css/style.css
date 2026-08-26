@@ -722,17 +722,30 @@ html:not([data-theme]) .theme-toggle [data-icon="moon"]{ display: block; }
 }
 
 /* ============================ PRODUCTS ===================================== */
+.product-video-layout{
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(3rem, 7vw, 7rem);
+  align-items: center;
+}
+.product-video-layout .section-head{ margin-bottom: 2.5rem; }
 .products-grid{
   display: grid;
-  gap: clamp(1.75rem, 4vw, 3rem);
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
 }
-.product-card{ text-align: center; }
+.product-card{
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  column-gap: 1.15rem;
+  align-items: center;
+  text-align: left;
+}
 .product-photo{
   position: relative;
-  width: clamp(150px, 22vw, 210px);
+  width: 76px;
   aspect-ratio: 1;
-  margin-inline: auto;
+  margin: 0;
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid var(--gold-dim);
@@ -751,14 +764,13 @@ html:not([data-theme]) .theme-toggle [data-icon="moon"]{ display: block; }
   transition: transform var(--dur-slow) var(--ease);
 }
 .product-card:hover .product-photo img{ transform: scale(1.08); }
-.product-card h3{ margin-top: 1.5rem; font-size: 1.25rem; }
+.product-card h3{ margin: 0; font-size: 1.1rem; grid-column: 2; grid-row: 1; }
 .product-card .index{
   font-family: var(--font-mono);
   color: var(--gold);
   font-size: 0.75rem;
   letter-spacing: 0.1em;
-  display: block;
-  margin-bottom: 0.6rem;
+  display: none;
 }
 
 /* ============================ VIDEO SHOWCASE ===================================== */
@@ -767,9 +779,10 @@ html:not([data-theme]) .theme-toggle [data-icon="moon"]{ display: block; }
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--hairline-solid);
-  aspect-ratio: 16/8;
+  /* aspect-ratio: 9/ 16; */
 }
-.video-showcase video, .video-showcase img{ width: 100%; height: 100%; object-fit: cover; }
+.video-showcase video, .video-showcase img{ width: 100%; height: 100%; object-fit: contain;max-height: 80vh;
+ }
 .video-showcase .play-toggle{
   position: absolute;
   right: 1.25rem; bottom: 1.25rem;
@@ -789,6 +802,11 @@ html:not([data-theme]) .theme-toggle [data-icon="moon"]{ display: block; }
   background: linear-gradient(0deg, #14120f66, transparent 45%);
   pointer-events: none;
   z-index: 2;
+}
+
+@media (max-width: 760px){
+  .product-video-layout{ grid-template-columns: 1fr; gap: 3rem; }
+  .product-video-layout .section-head{ margin-bottom: 2rem; }
 }
 
 /* ============================ WHY CHOOSE US ===================================== */
