@@ -1,0 +1,42 @@
+name: Pre-launch checks
+
+# Runs the standalone test scripts in /tests on every push and pull
+# request against main. Doesn't build or deploy anything — Netlify
+# handles deployment separately and independently of this workflow.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  site-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      # Each script is standalone (stdlib only, no requirements.txt
+      # needed) and checks one thing. Run them one at a time so a
+      # failure in one doesn't hide a failure in another.
+      - name: HTML validity
+        run: python3 tests/test_html_validity.py --root .
+
+      - name: Links and assets
+        run: python3 tests/test_links_and_assets.py --root .
+
+      - name: Security checks
+        run: python3 tests/test_security.py --root .
+
+      - name: SEO / meta tags
+        run: python3 tests/test_seo_meta.py --root .
+
+      - name: Accessibility
+        run: python3 tests/test_accessibility.py --root .
+
+      - name: JSON-LD structured data
+        run: python3 tests/test_json_ld.py --root .
